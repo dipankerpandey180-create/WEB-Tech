@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Comprehensive CSS Example</title>
+
+  <!-- External CSS Link -->
+  <link rel="stylesheet" href="jkk.css" />
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      margin: 0;
+      background-color: #fafafa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    header {
+      background-color: #0078d7;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .internal-section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      background-color: #e7f3ff;
+      border-left: 6px solid #0078d7;
+      box-shadow: 0 0 10px rgba(0, 120, 215, 0.2);
+    }
+
+    .internal-section h2 {
+      color: #005a9e;
+      margin-bottom: 10px;
+    }
+
+    .button-special {
+      background-color: #0078d7;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-special:hover {
+      background-color: #005a9e;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header style="font-size: 30px; letter-spacing: 4px;">
+    Welcome to the CSS Practice Page
+  </header>
+
+  <section class="internal-section">
+    <h2>Internal CSS Section</h2>
+    <p>This section is styled using internal CSS written inside the &lt;style&gt; tag in the &lt;head&gt;.</p>
+    <p>Notice the blue border on the left and the light background color.</p>
+  </section>
+
+  <section style="background-color: #ffeecd; padding: 20px; max-width: 900px; margin: 20px auto; border-radius: 8px;">
+    <h2 style="color: #cc6600;">Inline CSS Section</h2>
+    <p>This entire section, including the background color and heading color, uses inline CSS.</p>
+    <button class="button-special" style="background-color: #cc6600;">
+      Inline Styled Button
+    </button>
+  </section>
+
+  <section class="external-section">
+    <h2>External CSS Section</h2>
+    <p>This section and its content are styled using external CSS defined in the <code>styles.css</code> file.</p>
+    <button class="button-special">
+      External CSS Button
+    </button>
+  </section>
+
+</body>
+
+</html>

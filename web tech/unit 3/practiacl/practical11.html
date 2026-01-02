@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Arithmetic Operations – Dipanker</h2>
+
+<input id="a" placeholder="Enter first number">
+<input id="b" placeholder="Enter second number">
+<button onclick="calc()">Calculate</button>
+
+<p id="out"></p>
+
+<script>
+function calc(){
+  let x = Number(a.value);
+  let y = Number(b.value);
+  out.innerHTML =
+    "Addition: " + (x+y) + "<br>" +
+    "Subtraction: " + (x-y) + "<br>" +
+    "Multiplication: " + (x*y) + "<br>" +
+    "Division: " + (x/y);
+}
+</script>
+</body>
+</html>

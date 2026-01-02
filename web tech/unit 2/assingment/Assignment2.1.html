@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Profile Card</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ABE2, #5563DE);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #card-container {
+            position: relative;
+        }
+
+        .profile-card {
+            background-color: #fff;
+            width: 300px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ---- Circular Small Image ---- */
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 15px 0 5px;
+            color: #333;
+        }
+
+        .profile-title {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .profile-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #5563DE;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .profile-btn:hover {
+            background-color: #3949AB;
+            transform: scale(1.05);
+        }
+
+        .profile-btn:active {
+            background-color: #283593;
+            transform: scale(0.98);
+        }
+
+        .profile-input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+            width: 80%;
+            transition: border-color 0.3s ease;
+        }
+
+        .profile-input:focus {
+            border-color: #5563DE;
+            outline: none;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: crimson;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="card-container">
+        <div class="badge">Pro</div>
+        <div class="profile-card">
+            <img src="geet.jpeg" alt="Profile Picture">
+            <div class="profile-name">Geet Vegad</div>
+            <div class="profile-title">Web Developer</div>
+
+            <input type="text" class="profile-input" placeholder="Send a message">
+            <br>
+            <a href="#" class="profile-btn">Follow</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

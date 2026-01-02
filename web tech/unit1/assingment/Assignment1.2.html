@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Understanding the HTML Anchor Tag</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #111;
+            background-color: lightgrey;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            margin: 12px 0 8px 0;
+        }
+
+        pre {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: Consolas, "Courier New", monospace;
+        }
+
+        ul {
+            margin-left: 18px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Anchor Tag Explained</h1>
+    </header>
+
+    <section>
+        <h2>1) Role of the &lt;a&gt; Element</h2>
+        <p>The &lt;a&gt; element, commonly called the anchor tag, is essential for creating <strong>links</strong>
+            that allow users to navigate between web pages or different locations within the same page.</p>
+    </section>
+
+    <section>
+        <h2>2) &lt;a&gt; Tag Syntax</h2>
+        <pre><code>&lt;a href="URL" target="_blank" title="Tooltip description"&gt;Clickable Text&lt;/a&gt;</code></pre>
+        <h3>Details of the Attributes Used:</h3>
+        <ul>
+            <li><code>&lt;a&gt;</code> — Begins the link element.</li>
+            <li><code>href="URL"</code> — Points to the destination web address.</li>
+            <li><code>target="_blank"</code> — Optional; opens the link in a new browser tab.</li>
+            <li><code>title="Tooltip description"</code> — Optional; shows extra information on hover.</li>
+            <li><code>Clickable Text</code> — The text the user clicks on.</li>
+            <li><code>&lt;/a&gt;</code> — Ends the link element.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3) Sample Usage</h2>
+        <p>Below is an example link to Google that opens in a new tab and displays a tooltip:</p>
+        <a href="https://www.google.com" target="_blank" title="Navigate to Google Homepage">Go to Google</a>
+        <h3>Corresponding Code:</h3>
+        <pre><code>&lt;a href="https://www.google.com" target="_blank" title="Navigate to Google Homepage"&gt;Go to Google&lt;/a&gt;</code></pre>
+    </section>
+
+    <section>
+        <h2>4) How It Works</h2>
+        <p>Clicking this link launches the Google homepage in a new browser tab. Hovering your cursor
+            over the link text reveals the tooltip "Navigate to Google Homepage" for additional context.</p>
+    </section>
+
+    <section>
+        <h2>5) Summary</h2>
+        <p>The anchor (&lt;a&gt;) tag is fundamental in HTML for creating hyperlinks, enabling easy navigation across
+            different resources on the web.</p>
+    </section>
+
+    <footer>
+        <p>Dipanker Pandey</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      padding: 30px;
+    }
+
+    header,
+    main,
+    footer {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .inline-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #000;
+      background: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Student Registration Form</h1>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <fieldset class="form-group">
+        <legend>Gender</legend>
+        <div class="inline-group">
+          <label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
+          <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+          <label for="other"><input type="radio" id="other" name="gender" value="other"> Other</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend>Hobbies</legend>
+        <div class="inline-group">
+          <label for="reading"><input type="checkbox" id="reading" name="hobbies" value="reading"> Reading</label>
+          <label for="traveling"><input type="checkbox" id="traveling" name="hobbies" value="traveling">
+            Traveling</label>
+          <label for="coding"><input type="checkbox" id="coding" name="hobbies" value="coding"> Coding</label>
+        </div>
+      </fieldset>
+
+      <div class="form-group">
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+          <option value="">--Choose a course--</option>
+          <option value="btech">B.Tech</option>
+          <option value="bca">BCA</option>
+          <option value="msc">M.Sc</option>
+          <option value="mba">MBA</option>
+        </select>
+      </div>
+
+      <div class="form-group inline-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+
+    </form>
+  </main>
+
+
+</body>
+
+</html>

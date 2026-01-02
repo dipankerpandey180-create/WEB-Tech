@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Attributes </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #222;
+            background-color: rgba(37, 169, 206, 0.85);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .card {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 950px;
+            margin: 15px auto;
+            background-color: #fff;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #eef;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Attributes - Explained & Examples</h1>
+    </header>
+
+    <section class="card">
+        <h2>1) What are Attributes?</h2>
+        <p>Attributes are written inside an HTML element and provide additional information about the element — such as
+            name and value (name="value").</p>
+
+        <h2>2) Example — <code>&lt;a&gt; (href)</code></h2>
+        <p>This attribute specifies the destination of a link.</p>
+        <p>Example: <a href="https://www.wikipedia.org" target="_blank">Open Wikipedia</a></p>
+        <h3>Code:</h3>
+        <pre><code>&lt;a href="https://www.wikipedia.org" target="_blank" title="Go to Wikipedia"&gt;Open Wikipedia&lt;/a&gt;</code></pre>
+
+        <h2>3) Example — <code>&lt;img&gt; (src, alt)</code></h2>
+        <p><code>src</code> defines the path to the image, and <code>alt</code> is shown if the image fails to load.</p>
+        <h3>Example:</h3>
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Example Image" width="200"
+            style="display:block; margin-bottom:8px; height:auto;">
+        <h3>Code:</h3>
+        <pre><code>&lt;img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d" alt="Coding Example"&gt;</code></pre>
+
+        <h2>4) Some Other Common Attributes</h2>
+        <ul>
+            <li><code>class</code> — Assigns a group or class for CSS or JavaScript.</li>
+            <li><code>id</code> — Provides a unique identifier for each element.</li>
+            <li><code>title</code> — Shows a small tooltip when hovered over.</li>
+        </ul>
+    </section>
+
+
+</body>
+
+</html>

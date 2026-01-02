@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Difference Between Ordered and Unordered Lists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 40px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+
+        code {
+            background-color: #ecf0f1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #c0392b;
+        }
+
+        pre {
+            background-color: #ecf0f1;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Understanding Ordered and Unordered Lists in HTML</h1>
+
+    <h2>1) Ordered List (&lt;ol&gt;)</h2>
+    <p>An ordered list displays items in a specific sequence with numbers, letters, or roman numerals. Use it when the
+        order of items is important, such as steps in a process or ranked information.</p>
+    <pre>
+&lt;ol&gt;
+    &lt;li&gt;Collect data&lt;/li&gt;
+    &lt;li&gt;Clean data&lt;/li&gt;
+    &lt;li&gt;Analyze data&lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+    <p><strong>Output:</strong></p>
+    <ol>
+        <li>Collect data</li>
+        <li>Clean data</li>
+        <li>Analyze data</li>
+    </ol>
+
+    <h2>2) Unordered List (&lt;ul&gt;)</h2>
+    <p>An unordered list shows items with bullet points without any specific order. Use it when sequence does not
+        matter, such as listing technologies or categories.</p>
+    <pre>
+&lt;ul&gt;
+    &lt;li&gt;Python&lt;/li&gt;
+    &lt;li&gt;Java&lt;/li&gt;
+    &lt;li&gt;C++&lt;/li&gt;
+&lt;/ul&gt;
+    </pre>
+    <p><strong>Output:</strong></p>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+    <h2>3) Summary of Differences</h2>
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>Ordered List (&lt;ol&gt;)</th>
+            <th>Unordered List (&lt;ul&gt;)</th>
+        </tr>
+        <tr>
+            <td>Purpose</td>
+            <td>Lists where order matters (steps, priority)</td>
+            <td>Lists where order does not matter (categories)</td>
+        </tr>
+        <tr>
+            <td>Markers</td>
+            <td>Numbers, letters, roman numerals</td>
+            <td>Bullet points (dots, circles, squares)</td>
+        </tr>
+        <tr>
+            <td>Typical Usage</td>
+            <td>Instructions, rankings, sequences</td>
+            <td>Groups, features, unordered items</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

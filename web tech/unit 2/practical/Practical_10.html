@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stylish Div and Span Layout</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      padding: 30px 40px;
+    }
+
+    .header, .footer {
+      background: linear-gradient(90deg, #43cea2, #185a9d);
+      padding: 25px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      user-select: none;
+    }
+
+    .content {
+      display: flex;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #2a5298;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: inset 0 0 15px rgba(66, 165, 245, 0.4);
+      color: #c8e6c9;
+      font-weight: 500;
+    }
+
+    .main {
+      flex: 2;
+      background: #1e3c72;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #e3f2fd;
+      user-select: text;
+    }
+
+    /* Span styling */
+    .highlight {
+      background: #ffeb3b;
+      color: #3e2723;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 0 8px #ffd600aa;
+      transition: background 0.3s ease;
+    }
+    .highlight:hover {
+      background: #fbc02d;
+      cursor: pointer;
+      box-shadow: 0 0 15px #fbc02daa;
+    }
+
+    .label {
+      font-size: 0.9rem;
+      background: #29b6f6;
+      padding: 3px 10px;
+      margin-right: 8px;
+      border-radius: 12px;
+      font-weight: 700;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="header">Elegant Div and Span Layout</div>
+
+    <div class="content">
+
+      <div class="sidebar">
+        <p><span class="label">Info</span> This sidebar uses <span class="highlight">div</span> blocks styled with soft shadows and gradients.</p>
+        <p>It's designed to neatly separate navigation or important notes.</p>
+      </div>
+
+      <div class="main">
+        <p>Here is the <span class="highlight">main content area</span>, made flexible with div layout.</p>
+        <p>Use <span class="label">span</span> elements like <span class="highlight">these</span> to highlight or label small inline sections without breaking the text flow.</p>
+        <p>Combining div for structure and span for inline styling makes your webpage both organized and visually appealing.</p>
+      </div>
+
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Advanced CSS Styling Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 5px solid #4CAF50;
+            /* green border */
+            border-radius: 15px;
+            box-sizing: border-box;
+            /* includes border and padding in width */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+
+        h1 {
+            margin: 0 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+
+        p {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            border: 2px dashed #81c784;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Advanced CSS Box Model Example</h1>
+        <p>This block demonstrates usage of <strong>margins</strong>, <strong>padding</strong>,
+            <strong>borders</strong>, and <strong>background image</strong> on the body.</p>
+        <p>The container width accounts for padding and border because of <code>box-sizing: border-box;</code>.</p>
+    </div>
+
+</body>
+
+</html>

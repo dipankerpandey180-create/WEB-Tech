@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Form Validation</h2>
+
+<form onsubmit="return check()">
+<input id="name" placeholder="Enter Name">
+<input type="submit">
+</form>
+
+<script>
+function check(){
+  if(name.value==""){
+    alert("Name is required");
+    return false;
+  }
+  alert("Form Submitted");
+  return true;
+}
+</script>
+</body>
+</html>

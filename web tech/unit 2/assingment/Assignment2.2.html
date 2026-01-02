@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #FFEBEE;
+      font-family: Arial, sans-serif;
+      transition: background 0.4s ease;
+    }
+
+    header {
+      background: #E53935;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .mode-label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .container {
+      width: 100%;
+    }
+
+    .sidebar,
+    .content {
+      padding: 20px;
+    }
+
+    .sidebar {
+      background: #FFCDD2;
+    }
+
+    .content {
+      background: #FFFFFF;
+    }
+
+    .sidebar,
+    .content {
+      width: 100%;
+      display: block;
+    }
+
+
+    @media (min-width: 600px) and (max-width: 900px) {
+
+      body {
+        background: #E3F2FD;
+        font-family: Georgia, serif;
+      }
+
+      header {
+        background: #1E88E5;
+      }
+
+      .sidebar {
+        background: #BBDEFB;
+        float: left;
+        width: 30%;
+      }
+
+      .content {
+        background: #FFFFFF;
+        float: left;
+        width: 70%;
+      }
+
+      .container::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
+
+    @media (min-width: 901px) {
+
+      body {
+        background: #E8F5E9;
+        font-family: "Trebuchet MS", sans-serif;
+      }
+
+      header {
+        background: #43A047;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .sidebar {
+        background: #C8E6C9;
+        flex: 1;
+        max-width: 260px;
+      }
+
+      .content {
+        background: #FFFFFF;
+        flex: 3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Responsive Layout – Different Themes</h1>
+    <p class="mode-label">
+      MOBILE (&lt;600px) / TABLET (600–900px) / DESKTOP (&gt;900px)
+    </p>
+  </header>
+
+  <div class="container">
+
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Navigation links or info here.</p>
+    </div>
+
+    <div class="content">
+      <h2>Main Content</h2>
+      <p>Resize the window to see background + font change:</p>
+      <ul>
+        <li><b>&lt; 600px</b> → Red theme + Arial</li>
+        <li><b>600–900px</b> → Blue theme + Georgia</li>
+        <li><b>&gt; 900px</b> → Green theme + Trebuchet</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
