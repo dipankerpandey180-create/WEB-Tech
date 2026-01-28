@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Creative Canvas Art</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #0f172a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    canvas {
+        border-radius: 14px;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    }
+</style>
+</head>
+<body>
+
+<canvas id="canvas" width="900" height="480"></canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let carX = -120;
+let stars = [];
+
+/* ⭐ Stars */
+for (let i = 0; i < 120; i++) {
+    stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height / 2,
+        r: Math.random() * 2
+    });
+}
+
+function drawSky() {
+    const g = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    g.addColorStop(0, "#020617");
+    g.addColorStop(1, "#1e293b");
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+function drawStars() {
+    ctx.fillStyle = "white";
+    stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+    });
+}
+
+function drawMoon() {
+    ctx.beginPath();
+    ctx.arc(750, 90, 40, 0, Math.PI * 2);
+    ctx.fillStyle = "#f8fafc";
+    ctx.shadowBlur = 25;
+    ctx.shadowColor = "white";
+    ctx.fill();
+    ctx.shadowBlur = 0;
+}
+
+function drawBuildings() {
+    ctx.fillStyle = "#020617";
+    for (let i = 0; i < canvas.width; i += 100) {
+        let h = Math.random() * 140 + 160;
+        ctx.fillRect(i, canvas.height - h - 60, 80, h);
+    }
+}
+
+/* 🪧 BILLBOARD */
+function drawBillboard() {
+    // Board
+    ctx.fillStyle = "#111827";
+    ctx.fillRect(260, 140, 380, 90);
+
+    // Border
+    ctx.strokeStyle = "#facc15";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(260, 140, 380, 90);
+
+    // Glow text
+    ctx.textAlign = "center";
+    ctx.shadowBlur = 20;
+    ctx.shadowColor = "#22d3ee";
+
+    ctx.fillStyle = "#e0f2fe";
+    ctx.font = "bold 28px Arial";
+    ctx.fillText("DIPANKER PANDEY", 450, 175);
+
+    ctx.font = "20px Arial";
+    ctx.fillText("ERP : 10473", 450, 205);
+
+    ctx.shadowBlur = 0;
+}
+
+function drawRoad() {
+    ctx.fillStyle = "#111827";
+    ctx.fillRect(0, canvas.height - 60, canvas.width, 60);
+
+    ctx.strokeStyle = "#fde047";
+    ctx.setLineDash([25, 18]);
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(0, canvas.height - 30);
+    ctx.lineTo(canvas.width, canvas.height - 30);
+    ctx.stroke();
+    ctx.setLineDash([]);
+}
+
+function drawCar() {
+    ctx.fillStyle = "#ef4444";
+    ctx.fillRect(carX, canvas.height - 110, 110, 35);
+
+    ctx.fillStyle = "#991b1b";
+    ctx.fillRect(carX + 25, canvas.height - 140, 60, 30);
+
+    ctx.fillStyle = "black";
+    ctx.beginPath();
+    ctx.arc(carX + 30, canvas.height - 75, 11, 0, Math.PI * 2);
+    ctx.arc(carX + 80, canvas.height - 75, 11, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Headlight beam
+    ctx.fillStyle = "rgba(255,255,180,0.35)";
+    ctx.beginPath();
+    ctx.moveTo(carX + 110, canvas.height - 110);
+    ctx.lineTo(carX + 180, canvas.height - 90);
+    ctx.lineTo(carX + 180, canvas.height - 130);
+    ctx.fill();
+
+    carX += 2.5;
+    if (carX > canvas.width + 50) carX = -140;
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    drawSky();
+    drawStars();
+    drawMoon();
+    drawBuildings();
+    drawBillboard();
+    drawRoad();
+    drawCar();
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>
