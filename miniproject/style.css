@@ -1,0 +1,149 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #1d2671, #c33764, #0f2027, #203a43);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HERO */
+.hero {
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin: 0;
+    text-shadow: 0 0 15px #fff;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.hero span {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* SLIDER */
+.slider {
+    width: 85%;
+    max-width: 800px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.slides {
+    display: flex;
+    transition: 0.6s ease-in-out;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* CAPTION */
+.caption {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* BUTTONS */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn:hover {
+    background: #ff00cc;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* DOTS */
+.dots {
+    margin: 15px 0;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #ff00cc;
+}
+
+/* INFO CARDS */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255,255,255,0.12);
+    width: 240px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #ffccff;
+}
+
+/* FOOTER */
+footer {
+    padding: 15px;
+    background: rgba(0,0,0,0.5);
+    font-size: 14px;
+}
